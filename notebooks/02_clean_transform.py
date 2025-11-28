@@ -10,4 +10,4 @@ df_clean = (
     .filter(col("energy").isNotNull())
 )
 
-df_clean.write.saveAsTable("workspace.default.clean.clean_table")
+df_clean.write.saveAsTable("workspace.default.clean_table")

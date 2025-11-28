@@ -9,4 +9,4 @@ df_feat = (
     .withColumn("energy_dance_ratio", col("energy") / col("danceability"))
 )
 
-df_feat.write.saveAsTable("workspace.default.features.feature_table")
+df_feat.write.saveAsTable("workspace.default.feature_table")
