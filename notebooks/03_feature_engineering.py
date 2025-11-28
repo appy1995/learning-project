@@ -9,4 +9,4 @@ df_feat = (
     .withColumn("energy_dance_ratio", col("energy") / col("danceability"))
 )
 
-df_feat.write.mode("overwrite").parquet("Workspace/Repos/appytong@gmail.com/learning-project/data/features/features")
+df_feat.write.mode("overwrite").parquet("dbfs:/FileStore/data/features/features")
