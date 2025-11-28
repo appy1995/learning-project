@@ -4,4 +4,4 @@ raw_df.printSchema()
 raw_df.limit(5).display()
 raw_df.count()
 
-raw_df.write.saveAsTable("workspace.default.raw_table")
+raw_df.write.saveAsTable("workspace.default.raw.raw_table")
