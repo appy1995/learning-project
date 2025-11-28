@@ -1,6 +1,6 @@
 from pyspark.sql.functions import col, to_date
 
-df = spark.read.parquet("/Workspace/Repos/appytong@gmail.com/learning-project/data/raw/raw_parquet")
+df = spark.read.table("main.default.raw_table")
 
 df_clean = (
     df
@@ -10,4 +10,4 @@ df_clean = (
     .filter(col("energy").isNotNull())
 )
 
-df_clean.write.mode("overwrite").parquet("Workspace/Repos/appytong@gmail.com/learning-project/data/clean/clean")
+df_clean.write.saveAsTable("workspace.default.clean_table")

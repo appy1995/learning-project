@@ -1,6 +1,6 @@
 from pyspark.sql.functions import year, floor
 
-df_clean = spark.read.parquet("/Workspace/Repos/appytong@gmail.com/learning-project/data/clean/clean")
+df_clean = spark.read.table("main.default.clean_table")
 
 df_feat = (
     df_clean
@@ -9,4 +9,4 @@ df_feat = (
     .withColumn("energy_dance_ratio", col("energy") / col("danceability"))
 )
 
-df_feat.write.mode("overwrite").parquet("dbfs:/FileStore/data/features/features")
+df_feat.write.saveAsTable("workspace.default.feature_table")
