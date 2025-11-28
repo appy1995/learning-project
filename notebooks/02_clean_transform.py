@@ -1,6 +1,6 @@
 from pyspark.sql.functions import col, to_date
 
-df = spark.read.table("workspce.default.raw_table")
+df = spark.read.table("workspace.default.raw_table")
 
 df_clean = (
     df
