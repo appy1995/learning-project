@@ -1,6 +1,6 @@
 from pyspark.sql.functions import col, to_date
 
-df = spark.read.parquet("Workspace/Repos/appytong@gmail.com/learning-project/data/raw/raw_parquet")
+df = spark.read.parquet("/Workspace/Repos/appytong@gmail.com/learning-project/data/raw/raw_parquet")
 
 df_clean = (
     df

@@ -1,4 +1,4 @@
-df = spark.read.parquet("Workspace/Repos/appytong@gmail.com/learning-project/data/features/features")
+df = spark.read.parquet("/Workspace/Repos/appytong@gmail.com/learning-project/data/features/features")
 
 # Popularity distribution
 df_feat.select("popularity").display()
