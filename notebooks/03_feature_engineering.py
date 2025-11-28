@@ -1,6 +1,6 @@
 from pyspark.sql.functions import year, floor
 
-df_clean = spark.read.table("main.default.clean_table")
+df_clean = spark.read.table("workspace.default.clean_table")
 
 df_feat = (
     df_clean
